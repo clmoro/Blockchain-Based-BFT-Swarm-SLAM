@@ -1,5 +1,6 @@
 # Blockchain-Based-BFT-Swarm-SLAM
-Blockchain-Based Byzantine Fault Tolerant Swarm-SLAM
+Repository that contains the code associated to the paper: Blockchain-Based Byzantine Fault Tolerant Swarm-SLAM (April 2024). Additional material related to the paper and the results can be found at this [website](https://sites.google.com/view/bft-swarm-slam).
+
 
 **Abstract**
 
