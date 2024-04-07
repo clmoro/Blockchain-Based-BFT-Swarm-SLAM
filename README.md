@@ -30,26 +30,33 @@ git clone https://github.com/MISTLab/Swarm-SLAM.git
 cd Swarm-SLAM
 mkdir src
 vcs import src < cslam.repos
+
 # Download toychain-swarm-SLAM
 git clone https://github.com/clmoro/toychain-swarm-SLAM
+
 # Download toychain-ROS2
 git clone https://github.com/clmoro/toychain-ROS2
+
 # Run your Swarm-SLAM nodes and Swarm-SLAM visualisation nodes (optional)
+
 # Launch the Gazebo simulation with 8 robots (in a new terminal)
 cd ../toychain-swarm-SLAM
 source /opt/ros/foxy/setup.bash
 source instal/setup.bash
 ros2 launch multiturtlebots_pkg multiturtlebots_arena1.py
+
 # Launch the robots controllers (in a new terminal)
 cd ../toychain-swarm-SLAM
 source /opt/ros/foxy/setup.bash
 source instal/setup.bash
 ros2 launch multiturtlebots_controller_pkg controller_estimator.launch.py
+
 # Launch the nodes of the blockchain Swarm-SLAM interface (in a new terminal)
 cd ../toychain-swarm-SLAM
 source /opt/ros/foxy/setup.bash
 source instal/setup.bash
 ros2 launchcustom_msg_pkg launch.xml
+
 # Run the blockchain node (in a new terminal)
 cd ../toychain-ROS2
 source /opt/ros/foxy/setup.bash
