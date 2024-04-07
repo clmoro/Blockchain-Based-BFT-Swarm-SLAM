@@ -11,14 +11,51 @@ We then propose a new approach based on blockchain technology to mitigate severa
 **Packages summary**
 
 * [toychain-ROS2](https://github.com/clmoro/toychain-ROS2): package that contains our Toy-Chain ROS2 integration and our custom smart contract;
-* [toychain-swarm-SLAM](https://github.com/clmoro/toychain-swarm-SLAM): package that contains the code for our simulation experiments and for the blockchain/Swarm-SLAM interface.
+* [toychain-swarm-SLAM](https://github.com/clmoro/toychain-swarm-SLAM): package that contains the code for our simulation experiments and for the blockchain/Swarm-SLAM interface;
+* [representative_experiment_data](link): .csv file that contains the APE error dataset for results replication. It is related to the simulation runs of the representative experiment with 10 metres Byzantine perturbation described in the paper.
   
 **Additional requirements**
 
 * [ROS2](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html);
-* [Swarm-SLAM](https://github.com/MISTLab/Swarm-SLAM): the open-source C-SLAM system used in the project;
+* [Swarm-SLAM and its dependencies](https://github.com/MISTLab/Swarm-SLAM): the open-source C-SLAM system used in the project;
 * [Gazebo](https://classic.gazebosim.org/tutorials?tut=ros2_installing): to install if you want run the simulation environment used in the paper;
 * [Toy-Chain](https://github.com/teksander/toychain): it is a custom blockchain already integrated in the packege [toychain-ROS2](https://github.com/clmoro/toychain-ROS2).
+
+**How to use**
+
+```
+# Install Swarm-SLAM ([Swarm-SLAM start-up instructions](https://lajoiepy.github.io/cslam_documentation/html/md_startup_instructions.html))
+sudo apt install python3-vcstool
+git clone https://github.com/MISTLab/Swarm-SLAM.git
+cd Swarm-SLAM
+mkdir src
+vcs import src < cslam.repos
+# Download toychain-swarm-SLAM
+git clone https://github.com/clmoro/toychain-swarm-SLAM
+# Download toychain-ROS2
+git clone https://github.com/clmoro/toychain-ROS2
+# Run your Swarm-SLAM nodes and Swarm-SLAM visualisation nodes (optional)
+# Launch the Gazebo simulation with 8 robots (in a new terminal)
+cd ../toychain-swarm-SLAM
+source /opt/ros/foxy/setup.bash
+source instal/setup.bash
+ros2 launch multiturtlebots_pkg multiturtlebots_arena1.py
+# Launch the robots controllers (in a new terminal)
+cd ../toychain-swarm-SLAM
+source /opt/ros/foxy/setup.bash
+source instal/setup.bash
+ros2 launch multiturtlebots_controller_pkg controller_estimator.launch.py
+# Launch the nodes of the blockchain Swarm-SLAM interface (in a new terminal)
+cd ../toychain-swarm-SLAM
+source /opt/ros/foxy/setup.bash
+source instal/setup.bash
+ros2 launchcustom_msg_pkg launch.xml
+# Run the blockchain node (in a new terminal)
+cd ../toychain-ROS2
+source /opt/ros/foxy/setup.bash
+source instal/setup.bash
+ros2 run blockchain_controller_pkg BC_controller
+```
 
 **Citation**
 
