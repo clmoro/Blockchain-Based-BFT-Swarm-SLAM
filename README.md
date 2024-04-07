@@ -10,8 +10,8 @@ We then propose a new approach based on blockchain technology to mitigate severa
 
 **Packages summary**
 
-* [toychain-ROS2](https://github.com/clmoro/toychain-ROS2): package that contains our Toy-Chain ROS2 integration and our custom smart contract;
 * [toychain-swarm-SLAM](https://github.com/clmoro/toychain-swarm-SLAM): package that contains the code for our simulation experiments and for the blockchain/Swarm-SLAM interface;
+* [toychain-ROS2](https://github.com/clmoro/toychain-ROS2): package that contains our Toy-Chain ROS2 integration and our custom smart contract;
 * [representative_experiment_data](link): .csv file that contains the APE error dataset for results replication. It is related to the simulation runs of the representative experiment with 10 metres Byzantine perturbation described in the paper.
   
 **Additional requirements**
