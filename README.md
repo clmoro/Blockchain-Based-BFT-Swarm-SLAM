@@ -69,14 +69,14 @@ ros2 run blockchain_controller_pkg BC_controller
 If you find our project useful, please cite our paper:
 
 ```
-@inproceedings{Moroncelli2024Byzan-70371,
-  year={2024},
-  title={Byzantine Fault Detection in Swarm-SLAM using Blockchain and Geometric Constraints},
-  number={14987},
-  publisher={Springer},
-  address={Cham},
-  series={Lecture Notes in Computer Science},
-  booktitle={Proceedings of the 14th International Conference on Swarm Intelligence (ANTS)},
-  author={Moroncelli, Angelo and Pacheco, Alexandre and Strobel, Volker and Lajoie, Pierre-Yves and Dorigo, Marco and Reina, Andreagiovanni}
-}
+@inproceedings{MorPacStr-etal2024:ants,
+address = {Berlin, Germany},
+author = {A. Moroncelli and A. Pacheco and V. Strobel and P.-Y. Lajoie and M. Dorigo and A. Reina},
+booktitle = {Swarm Intelligence -- Proceedings of ANTS 2024 -- Fourteenth International Conference},
+pages = {42--56},
+publisher = {Springer},
+series =  {Lecture Notes in Computer Science},
+title = {Byzantine Fault Detection in Swarm-SLAM Using Blockchain and Geometric Constraints},
+volume = {14987},
+year = {2024}}
 ```
